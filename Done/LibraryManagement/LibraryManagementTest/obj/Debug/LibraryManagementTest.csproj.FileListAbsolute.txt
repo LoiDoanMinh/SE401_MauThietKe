@@ -1,0 +1,40 @@
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\bin\Debug\LibraryManagementTest.dll
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\bin\Debug\LibraryManagementTest.pdb
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\bin\Debug\LibraryManagement.exe
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\bin\Debug\LibraryManagement.pdb
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\bin\Debug\LibraryManagement.exe.config
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.csproj.AssemblyReference.cache
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.csproj.CoreCompileInputs.cache
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.csproj.CopyComplete
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.dll
+D:\Trung\_Study\CODE\Now\CN_NET\meow\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.pdb
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\bin\Debug\LibraryManagementTest.dll
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\bin\Debug\LibraryManagementTest.pdb
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\bin\Debug\LibraryManagement.exe
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\bin\Debug\LibraryManagement.pdb
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\bin\Debug\LibraryManagement.exe.config
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.csproj.AssemblyReference.cache
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.csproj.CoreCompileInputs.cache
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.csproj.CopyComplete
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.dll
+C:\Users\trung\OneDrive\Máy tính\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.pdb
+C:\Users\ACER\source\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.csproj.AssemblyReference.cache
+C:\Users\ACER\source\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.csproj.CoreCompileInputs.cache
+C:\Users\ACER\source\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.dll
+C:\Users\ACER\source\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagementTest\obj\Debug\LibraryManagementTest.pdb
