@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Done",
+    "\\Done\\LibraryManagement",
+    "\\Done\\LibraryManagement\\Command",
+    "\\Done\\LibraryManagement\\LibraryManagement\\Forms",
+    "\\Done\\LibraryManagement\\LibraryManagement\\Forms\\BorrowReturnBook",
+    "\\Done\\LibraryManagement\\LibraryManagement\\Models"
+  ],
+  "SelectedNode": "\\Done\\LibraryManagement\\Command\\Class1.cs",
+  "PreviewInSolutionExplorer": false
+}

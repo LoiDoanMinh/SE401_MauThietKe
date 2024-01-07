@@ -8,11 +8,16 @@ using System.Threading;
 using System.ComponentModel;
 using System.Reflection;
 using System.Data;
+using LibraryManagement.Command;
+using LibraryManagement.State;
+using static System.Windows.Forms.AxHost;
 
 namespace DemoDesign
 {
     public partial class BorrowReturnBook : Form
     {
+        private ICommand command;
+
         public static string borrowState = "";
         public static string cardId = "";
 
@@ -26,6 +31,9 @@ namespace DemoDesign
         Reader reader = null;
 
         int numBorrowedBooks = -1, listIndex = -1;
+
+        //State
+        private StateContext state = new StateContext();
 
         public BorrowReturnBook()
         {
@@ -169,6 +177,44 @@ namespace DemoDesign
             }
             catch { }
             
+        }
+
+        //Hàm của receiver thực hiện
+        public void CreateBorrowCardMethod()
+        {
+            CreateBorrowCard.reader = reader;
+            CreateBorrowCard.numBorrowedBooks = numBorrowedBooks;
+            new CreateBorrowCard().ShowDialog();
+            if (borrowState == "Success")
+            {
+                state.setState(new CreateBorrowCardState());
+                string content = state.applyState(id: cardId, type: 0);
+                MessageBox.Show(content, "Thông báo");
+
+                borrowState = "";
+
+                LoadBorrowCardList();
+                CheckDateExpriedReaderCard(reader.dateExpried);
+                LoadNumBorrowBooks(cbbReaderId.Text);
+            }
+        }
+
+        //Hàm của receiver thực hiện
+        public void CreateReturnCardMethod()
+        {
+            CreateReturnCard.reader = reader;
+            new CreateReturnCard().ShowDialog();
+
+            if (CreateReturnCard.state == "Success")
+            {
+                state.setState(new CreateReturnCardState());
+                string content = state.applyState(id: cardId, type: 0);
+                MessageBox.Show(content, "Thông báo");
+
+                LoadReturnCardList();
+                CheckDateExpriedReaderCard(reader.dateExpried);
+                LoadNumBorrowBooks(cbbReaderId.Text);
+            }
         }
         #endregion
 
@@ -352,7 +398,7 @@ namespace DemoDesign
             }
         }
 
-        private void CheckDateExpriedReaderCard(DateTime date)
+        protected void CheckDateExpriedReaderCard(DateTime date)
         {
             if (date >= DateTime.Now.Date)
             {
@@ -432,56 +478,20 @@ namespace DemoDesign
         }
         #endregion
 
-        #region Handle create new card, view detail of card, delete card and search
+        #region Handle create new card, view detail of card, delete card and 
+        //Tạo Return card --> Mượn sách (Invoker)
         private void btnCreateBorrowCard_Click(object sender, EventArgs e)
         {
-            CreateBorrowCard.reader = reader;
-            CreateBorrowCard.numBorrowedBooks = numBorrowedBooks;
-            new CreateBorrowCard().ShowDialog();
-            if (borrowState == "Success")
-            {
-                MessageBox.Show($"Tạo phiếu mượn {cardId} thành công!", "Thông báo");
-                borrowState = "";
-
-                LoadBorrowCardList();
-                CheckDateExpriedReaderCard(reader.dateExpried);
-                LoadNumBorrowBooks(cbbReaderId.Text);
-            }
+            command = new BorrowCommand(this);
+            command.Execute();
         }
 
+        //Tạo Return card --> Trả sách (Invoker)
         private void btnCreateReturnCard_Click(object sender, EventArgs e)
         {
-            CreateReturnCard.reader = reader;
-            new CreateReturnCard().ShowDialog();
-
-            if (CreateReturnCard.state == "Success")
-            {
-                MessageBox.Show($"Tạo phiếu trả {cardId} thành công!", "Thông báo");
-
-                LoadReturnCardList();
-                CheckDateExpriedReaderCard(reader.dateExpried);
-                LoadNumBorrowBooks(cbbReaderId.Text);
-            }
+            command = new ReturnCommand(this);
+            command.Execute();
         }
-
-        //private void SendMail()
-        //{
-        //    string slipTitle = "<b>THÔNG TIN PHIẾU MƯỢN</b><br/><br/>";
-        //    string readerCode = $"<b>Mã độc giả</b>: {borrowCard.readerId}<br/>";
-        //    string readerName = $"<b>Họ tên</b>: {borrowCard.readerName}<br/>";
-        //    string borrowDate = $"<b>Ngày mượn</b>: {FormatDate(borrowCard.borrowDate)}<br/>";
-        //    string returnDate = $"<b>Ngày trả</b>: {FormatDate(borrowCard.returnDate)}<br/>";
-        //    string borrowBooksTitle = $"<br/><b>SÁCH ĐÃ MƯỢN:</b><br/>";
-        //    string borrowBooks = "";
-        //    foreach (Book book in borrowCard.chosenBooks)
-        //    {
-        //        string bookInfo = $"<b>Mã sách:</b> {book.id}&emsp;&emsp;<b>Tên sách:</b> {book.name}&emsp;&emsp;<b>Tác giả:</b> {book.author}<br/>";
-        //        borrowBooks += bookInfo;
-        //    }
-
-        //    string msg = slipTitle + readerCode + readerName + borrowDate + returnDate + borrowBooksTitle + borrowBooks;
-        //    MailService.SendMail(borrowCard.email, msg, borrowCard.readerName);
-        //}
 
         private void btnOpenDetail_Click(object sender, EventArgs e)
         {
@@ -563,7 +573,8 @@ namespace DemoDesign
                 MessageBox.Show("Danh sách phiếu trả trống!", "Thông báo");
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        //Thực hiện xóa phiếu mượn sách và trả sách
+        private void btnDelete_Click(object sender, EventArgs e) 
         {
             if (cbbList.SelectedIndex == 0)
             {
@@ -573,11 +584,17 @@ namespace DemoDesign
                         BorrowCard delete = BorrowCard.GetBorrowCard(dtgvBorrowList.SelectedRows[0].Cells[1].Value.ToString());
                         if (delete != null)
                         {
-                            var result = MessageBox.Show($"Bạn có muốn xóa phiếu mượn sách {delete.id} không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                            state.setState(new DeleteDetailBorrowCard());
+                            string content = state.applyState(id: delete.id, type: 1);
+
+                            var result = MessageBox.Show(content, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                             if (result == DialogResult.OK)
                                 if (BorrowCard.DeleteBorrowCard(delete.id))
                                 {
-                                    MessageBox.Show($"Xóa phiếu mượn sách {delete.id} thành công!", "Thông báo");
+                                    content = state.applyState(id: delete.id, type: 0);
+
+                                    //Xóa phiếu mượn
+                                    MessageBox.Show(content, "Thông báo");
                                     LoadBorrowCardList();
                                     LoadReturnCardList();
                                     LoadNumBorrowBooks(delete.readerId);
@@ -597,12 +614,17 @@ namespace DemoDesign
                         ReturnCard delete = ReturnCard.GetReturnCard(dtgvReturnList.SelectedRows[0].Cells[1].Value.ToString());
                         if (delete != null)
                         {
-                            var result = MessageBox.Show($"Bạn có muốn xóa phiếu trả sách {delete.id} không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                            state.setState(new DeleteDetailReturnCard());
+                            string content = state.applyState(id: delete.id, type: 1);
+
+                            var result = MessageBox.Show(content, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                             if (result == DialogResult.OK)
                                 if (ReturnCard.DeleteReturnCard(delete.id))
                                 {
-                                    MessageBox.Show($"Xóa phiếu mượn sách {delete.id} thành công!", "Thông báo");
+                                    content = state.applyState(id: delete.id, type: 0);
+
+                                    MessageBox.Show(content, "Thông báo");
                                     LoadReturnCardList();
                                     LoadNumBorrowBooks(delete.readerId);
                                 }

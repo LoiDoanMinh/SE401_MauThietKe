@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Windows.Interop;
 using System.Diagnostics.Eventing.Reader;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using LibraryManagement.State;
 
 namespace LibraryManagement.Forms
 {
@@ -23,6 +24,8 @@ namespace LibraryManagement.Forms
         BindingList<Models.DetailBorrowCard> detailList;
         BindingSource bindingDetail;
         int maxDays;
+
+        private StateContext state = new StateContext();
 
         #region Init and custom form
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -201,7 +204,14 @@ namespace LibraryManagement.Forms
                     if (deleteBorrowCard)
                         this.Close();
                     else
-                        MessageBox.Show($"Xóa chi tiết phiếu mượn {detailId} thành công!", "Thông báo");
+                    {
+                        string msg = "";
+
+                        state.setState(new DeleteDetailBorrowCard());
+                        msg = state.applyState(id: detailId, type: 0);
+
+                        MessageBox.Show(msg, "Thông báo");
+                    }
                     LoadDetailBorrowList();
                 }
                 catch (Exception ex)
@@ -223,19 +233,32 @@ namespace LibraryManagement.Forms
             string msg = "";
             if (deleteReturn || deleteBorrowCard)
             {
-                if (deleteReturn && deleteBorrowCard)
+                string content = "";
+                if (deleteReturn && deleteBorrowCard) //Xóa cả 2 phiếu
                     msg += $"Sách này đã được trả. Nếu xóa chi tiết phiếu mượn {id} thì hệ thống sẽ xóa thông tin phiếu mượn {borrowCard.id} và thông tin phiếu trả đi kèm.";
-                else if (deleteReturn)
-                    msg += $"Sách này đã được trả. Nếu xóa chi tiết phiếu mượn {id} thì hệ thống sẽ xóa thông tin phiếu trả đi kèm.";
-                else if (deleteBorrowCard)
-                    msg += $"Nếu xóa chi tiết phiếu mượn {id} thì hệ thống sẽ xóa phiếu mượn {borrowCard.id}.";
+                else if (deleteReturn) //Xóa phiếu trả
+                {
+                    state.setState(new DeleteDetailReturnCard());
+                    content = state.applyState(id: id, type: 3);
+                    msg += content;
+                }    
+                else if (deleteBorrowCard) //Xóa phiếu mượn
+                {
+                    state.setState(new DeleteDetailBorrowCard());
+                    content = state.applyState(id: id, phieu_id: borrowCard.id, type: 2);
+
+                    msg += content;
+                }    
 
                 msg += $"\nBạn có muốn tiếp tục xóa không?";
                 return MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
             else
             {
-                msg += $"Bạn có muốn xóa chi tiết phiếu mượn {id} không?";
+                state.setState(new DeleteDetailBorrowCard());
+                string content = state.applyState(id: id, type: 1);
+
+                msg += content;
                 return MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             }
         }
@@ -247,7 +270,10 @@ namespace LibraryManagement.Forms
             insertReturn = false;
             if (CreateReturnCard.state == "Success")
             {
-                MessageBox.Show($"Tạo phiếu trả thành công!", "Thông báo");
+                state.setState(new CreateReturnCardState());
+                string content = state.applyState(type: 0);
+
+                MessageBox.Show(content, "Thông báo");
                 insertReturn = true;
             }
             this.Close();

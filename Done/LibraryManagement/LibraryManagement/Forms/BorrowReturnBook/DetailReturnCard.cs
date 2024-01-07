@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using LibraryManagement.Models;
+using LibraryManagement.State;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace LibraryManagement.Forms
@@ -13,6 +14,8 @@ namespace LibraryManagement.Forms
         public static ReturnCard returnCard;
         public static bool delete;
         public static bool deleteReturn;
+
+        private StateContext state = new StateContext();
 
         BindingList<Models.DetailReturnCard> detailList;
         BindingSource bindingDetail;
@@ -148,9 +151,14 @@ namespace LibraryManagement.Forms
                             delete = true;
                             if (deleteReturn)
                                 this.Close();
-                            else
+                            else //Thực hiện xóa
                             {
-                                MessageBox.Show($"Xóa chi tiết phiếu trả {detail.id} thành công!", "Thông báo");
+                                string msg = "";
+
+                                state.setState(new DeleteDetailReturnCard());
+                                msg = state.applyState(id: detail.id, type: 0); 
+                                
+                                MessageBox.Show(msg, "Thông báo");
 
                                 returnCard = ReturnCard.GetReturnCard(returnCard.id);
                                 LoadDetailReturnList();
@@ -174,13 +182,19 @@ namespace LibraryManagement.Forms
             string msg = "";
             if (dtgv.Rows.Count == 1)
             {
-                msg += $"Nếu xóa chi tiết phiếu trả {id} thì hệ thống sẽ xóa phiếu trả {returnCardId}.\nBạn có muốn xóa chi tiết phiếu trả {id} không?";
+                state.setState(new DeleteDetailReturnCard());
+                string content = state.applyState(id: id, phieu_id: returnCardId, type: 2);
+
+                msg += content;
                 deleteReturn = true;
                 return MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
             else
             {
-                msg += $"Bạn có muốn xóa chi tiết phiếu trả {id} không?";
+                state.setState(new DeleteDetailReturnCard());
+                string content = state.applyState(id: id, type: 1);
+
+                msg += content;
                 return MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             }
         }
