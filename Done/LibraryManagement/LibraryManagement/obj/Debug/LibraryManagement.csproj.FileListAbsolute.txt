@@ -431,3 +431,35 @@ D:\Code\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\Libr
 D:\Code\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
 D:\Code\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.exe
 D:\Code\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.AssemblyReference.cache
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.SuggestedBindingRedirects.cache
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.ResolveComReference.cache
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.fHome.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\formdausach.Form1.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\FormLoaiSach.Form1.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\FormNhapSach.Form1.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\FormNhapSach.formCTPN.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\FormSach.Form1.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\FormTacGia.Form1.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\DemoDesign.BorrowReturnBook.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Forms.CreateBorrowCard.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Forms.CreateReturnCard.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Forms.DetailBorrowCard.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Forms.DetailReturnCard.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\ThayDoiQuyDinh.FormThayDoiQuyDinh.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\TraCuuSach.FormTraCuu.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\FormLoaiDocGia.FormLoaiDocGia.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\PhieuThuTien.FormThuTien.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManage.Form1.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\DemoDesign.Report.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Properties.Icons.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Properties.Resources.resources
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.GenerateResource.cache
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CoreCompileInputs.cache
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.exe
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe.config
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.pdb
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\FontAwesome.Sharp.dll
+D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
