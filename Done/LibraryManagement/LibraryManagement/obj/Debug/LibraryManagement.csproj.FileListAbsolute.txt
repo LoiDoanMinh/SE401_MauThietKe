@@ -400,6 +400,7 @@ C:\Users\ACER\source\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagement\o
 C:\Users\ACER\source\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
 C:\Users\ACER\source\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.exe
 C:\Users\ACER\source\SE310_.Net_NUnit\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
+<<<<<<< Updated upstream
 D:\Code\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe.config
 D:\Code\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe
 D:\Code\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.pdb
@@ -463,6 +464,8 @@ D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324
 D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.pdb
 D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\FontAwesome.Sharp.dll
 D:\Học tập\Tài Liệu học tập đại học- UIT\học kỳ 1 (2023-2324)\Mẫu thiết kế\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
+=======
+>>>>>>> Stashed changes
 C:\Users\trung\OneDrive\Máy tính\MTK\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe.config
 C:\Users\trung\OneDrive\Máy tính\MTK\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe
 C:\Users\trung\OneDrive\Máy tính\MTK\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.pdb

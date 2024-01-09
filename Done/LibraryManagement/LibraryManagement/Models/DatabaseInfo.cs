@@ -15,7 +15,10 @@ namespace LibraryManagement.Models
     {
         //Change the connectionString value before re-build the app
         public static string connectionString = @"Data Source=TRUNGNGUYEN\SQLEXPRESS;Initial Catalog=QLTV_MTK1;Integrated Security=True";
+<<<<<<< Updated upstream
        // public static string connectionString = @"Data Source=KHANHPC\SQLEXPRESS;Initial Catalog=QLTV2;Integrated Security=True";
+=======
+>>>>>>> Stashed changes
         public static string bookStockQueryCmd = @"SELECT DISTINCT CUONSACH.MaCuonSach, CUONSACH.MaSach, TenDauSach, TenTacGia, TenTheLoai
 FROM SACH, DAUSACH, CUONSACH, THELOAI, CTTACGIA, TACGIA
 WHERE SACH.MaDauSach = DAUSACH.MaDauSach AND DAUSACH.MaTheLoai = THELOAI.MaTheLoai
@@ -74,7 +77,7 @@ WHERE PHIEUMUON.MaDocGia = DOCGIA.MaDocGia AND PHIEUMUON.MaPhieuMuonSach ='{id}'
             foreach (Book book in card.borrowBooks)
             {
                 insertDetailCard += "\n" + $@"INSERT INTO CTPHIEUMUON(MaPhieuMuonSach, MaCuonSach, TinhTrangPM) VALUES('{card.id}','{book.id}', 0)";
-                updateBookState += "\n" + $@"UPDATE CUONSACH SET TinhTrang = 0 WHERE MaCuonSach = '{book.id}'";
+                updateBookState += book.RequestBorrow();
             }
             return insertNewCard + insertDetailCard + updateBookState;
         }
@@ -142,8 +145,8 @@ WHERE PHIEUTRASACH.MaDocGia = DOCGIA.MaDocGia AND PHIEUTRASACH.MaPhieuTraSach ='
 
             foreach (BorrowedBook book in card.returnBooks)
             {
-                insertDetailCard += "\n" + $@"INSERT INTO CTPT(MaPhieuTraSach, MaCuonSach, MaPhieuMuonSach, SoNgayMuon, SoNgayTraTre, TienPhat) VALUES('{card.id}','{book.id}','{book.borrowCardId}','{book.borrowedDays}', '{book.lateDays}', '{book.fine}')";
-                updateBookState += "\n" + $@"UPDATE CTPHIEUMUON SET TinhTrangPM = 1 WHERE MaChiTietPhieuMuon = '{book.detailBorrowId}'" + "\n" + $@"UPDATE CUONSACH SET TinhTrang = 1 WHERE MaCuonSach = '{book.id}'";
+                insertDetailCard += "\n" + $@"INSERT INTO CTPT(MaPhieuTraSach, MaCuonSach, MaPhieuMuonSach, SoNgayMuon, TienPhat) VALUES('{card.id}','{book.id}','{book.borrowCardId}','{book.borrowedDays}', '{book.fine}')";
+                updateBookState += "\n" + $@"UPDATE CTPHIEUMUON SET TinhTrangPM = 1 WHERE MaChiTietPhieuMuon = '{book.detailBorrowId}'" + "\n" + book.RequestReturn();
             }
             return insertNewCard + insertDetailCard + updateBookState;
         }

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
+using LibraryManagement.Models.State;
 namespace LibraryManagement.Models
 {
     public class BorrowedBook : INotifyPropertyChanged
@@ -19,6 +19,7 @@ namespace LibraryManagement.Models
         [System.ComponentModel.DisplayName("Số ngày trễ hạn")]
         public int lateDays { get; set; }
         public long fine { get; set; }
+        private BookState bookState;
 
         public BorrowedBook(string id, string bookName, string borrowCardId, string detailBorrowId, string borrowDate, string returnDate)
         {
@@ -28,6 +29,9 @@ namespace LibraryManagement.Models
             this.detailBorrowId = detailBorrowId;
             this.returnDate = returnDate;
             this.borrowDate = borrowDate;
+
+            this.bookState = new BorrowedState();
+            TransitionTo(this.bookState);
         }
 
         public BorrowedBook(BorrowedBook book)
@@ -41,6 +45,9 @@ namespace LibraryManagement.Models
             this.borrowedDays = book.borrowedDays;
             this.fine = book.fine;
             this.lateDays = book.lateDays;
+
+            this.bookState = new BorrowedState();
+            TransitionTo(this.bookState);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -49,6 +56,24 @@ namespace LibraryManagement.Models
             //C# 6 null-safe operator. No need to check for event listeners
             //If there are no listeners, this will be a noop
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        // The Context allows changing the State object at runtime.
+        public void TransitionTo(BookState state)
+        {
+            this.bookState = state;
+        }
+
+        // The Context delegates part of its behavior to the current State
+        // object.
+        public string RequestBorrow()
+        {
+            return this.bookState.HandleBorrowRequest(this.id);
+        }
+
+        public string RequestReturn()
+        {
+            return this.bookState.HandleReturnRequest(this.id);
         }
     }
 }

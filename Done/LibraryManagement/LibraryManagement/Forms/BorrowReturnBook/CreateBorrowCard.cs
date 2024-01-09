@@ -11,6 +11,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
+using LibraryManagement.Models.State;
 
 namespace LibraryManagement.Forms
 {
@@ -129,7 +130,9 @@ namespace LibraryManagement.Forms
             SqlCommand cmd = new SqlCommand(DatabaseInfo.bookStockQueryCmd, conn);
             using (SqlDataReader reader = cmd.ExecuteReader())
                 while (reader.Read())
-                    stockBooks.Add(new Book(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4)));
+                {
+                    stockBooks.Add(new Book(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), new AvailableState()));
+                }
             conn.Close();
 
             bindingChosen.DataSource = chosenBooks;

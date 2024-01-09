@@ -215,6 +215,12 @@
     <Compile Include="Forms\Report.designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Command\AddReaderCmd.cs" />
+    <Compile Include="Models\Command\Command.cs" />
+    <Compile Include="Models\Command\RemoveReaderCmd.cs" />
+    <Compile Include="Models\Command\UpdateReaderCmd.cs" />
+    <Compile Include="Models\State\AvailableState.cs" />
+    <Compile Include="Models\State\BookState.cs" />
     <Compile Include="Models\BorrowCard.cs" />
     <Compile Include="Models\BorrowedBook.cs" />
     <Compile Include="Models\DatabaseInfo.cs" />
@@ -229,6 +235,7 @@
     <Compile Include="Models\ReportByReader.cs" />
     <Compile Include="Models\ReportLate.cs" />
     <Compile Include="Models\ReturnCard.cs" />
+    <Compile Include="Models\State\BorrowedState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchClass\SearchByTypeStrategy.cs" />
