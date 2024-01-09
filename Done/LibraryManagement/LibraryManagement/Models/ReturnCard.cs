@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Windows;
+using LibraryManagement.Models.AbstractFactory;
 
 namespace LibraryManagement.Models
 {
-    public class ReturnCard
+    public class ReturnCard : Receipt
     {
-        public int stt { get; set; }
-        public string id { get; set; }
-        public string readerId { get; set; }
-        public string readerName { get; set; }
-        public string returnDate { get; set; }
         public long fineThisPeriod { get; set; }
         public BindingList<BorrowedBook> returnBooks;
 

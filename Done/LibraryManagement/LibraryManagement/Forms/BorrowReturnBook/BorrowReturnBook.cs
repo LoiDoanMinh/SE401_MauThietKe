@@ -11,6 +11,7 @@ using System.Data;
 using LibraryManagement.Command;
 using LibraryManagement.State;
 using static System.Windows.Forms.AxHost;
+using LibraryManagement.Models.AbstractFactory;
 
 namespace DemoDesign
 {
@@ -22,8 +23,8 @@ namespace DemoDesign
         public static string cardId = "";
 
         List<Reader> readers;
-        BindingList<BorrowCard> borrowCardList;
-        BindingList<ReturnCard> returnCardList;
+        BindingList<Receipt> borrowCardList;
+        BindingList<Receipt> returnCardList;
         BindingSource bingdingBorrow;
         BindingSource bingdingReturn;
         Thread tdLoadBorrowCardList;
@@ -45,8 +46,8 @@ namespace DemoDesign
         private void BorrowBook_Load(object sender, EventArgs e)
         {
             readers = new List<Reader>();
-            borrowCardList = new BindingList<BorrowCard>();
-            returnCardList = new BindingList<ReturnCard>();
+            borrowCardList = new BindingList<Receipt>();
+            returnCardList = new BindingList<Receipt>();
             bingdingBorrow = new BindingSource();
             bingdingReturn = new BindingSource();
 
@@ -118,6 +119,8 @@ namespace DemoDesign
 
         private void LoadBorrowCardList()
         {
+            AbstractSlipFactory borrowReceiptFactory = new BorrowReceiptFactory();
+
             SqlConnection conn = new SqlConnection(DatabaseInfo.connectionString);
             conn.Open();
             SqlCommand cmd = new SqlCommand(DatabaseInfo.getAllBorrowCards, conn);
@@ -128,7 +131,7 @@ namespace DemoDesign
                 borrowCardList.Clear();
                 while (reader.Read())
                 {
-                    BorrowCard card = new BorrowCard(stt, reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3).ToString("dd/MM/yyyy"), reader.GetDateTime(4).ToString("dd/MM/yyyy"));
+                    Receipt card = borrowReceiptFactory.CreateReceipt(stt, reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3).ToString("dd/MM/yyyy"), reader.GetDateTime(4).ToString("dd/MM/yyyy"));
                     borrowCardList.Add(card);
                     stt++;
                 }
@@ -155,6 +158,8 @@ namespace DemoDesign
 
         private void LoadReturnCardList()
         {
+            ReturnReceiptFactory returnReceiptFactory = new ReturnReceiptFactory();
+
             SqlConnection conn = new SqlConnection(DatabaseInfo.connectionString);
             conn.Open();
             SqlCommand cmd = new SqlCommand(DatabaseInfo.getAllReturnCards, conn);
@@ -165,7 +170,7 @@ namespace DemoDesign
                 returnCardList.Clear();
                 while (reader.Read())
                 {
-                    ReturnCard card = new ReturnCard(stt, reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3).ToString("dd/MM/yyyy"), (long)reader.GetDecimal(4));
+                    Receipt card = returnReceiptFactory.CreateReceipt1(stt, reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3).ToString("dd/MM/yyyy"), (long)reader.GetDecimal(4));
                     returnCardList.Add(card);
                     stt++;
                 }
