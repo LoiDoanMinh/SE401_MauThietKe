@@ -205,7 +205,7 @@ AND TinhTrangPM = 0 AND CUONSACH.MaCuonSach='{bookId}' AND MaDocGia='{readerId}'
 
         public static string GetAllDetailReturnByReturnCardId(string id)
         {
-            return $@"SELECT MaChiTietPhieuTra, CTPT.MaCuonSach, TenDauSach, CTPT.MaPhieuMuonSach, SoNgayMuon, SoNgayTraTre, TienPhat
+            return $@"SELECT MaChiTietPhieuTra, CTPT.MaCuonSach, TenDauSach, CTPT.MaPhieuMuonSach, SoNgayMuon, TienPhat
 FROM CTPT, PHIEUTRASACH, SACH, CUONSACH, DAUSACH, PHIEUMUON
 WHERE CTPT.MaPhieuTraSach = PHIEUTRASACH.MaPhieuTraSach 
 AND CTPT.MaPhieuMuonSach = PHIEUMUON.MaPhieuMuonSach

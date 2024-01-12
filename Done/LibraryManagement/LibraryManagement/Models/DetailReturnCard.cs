@@ -29,7 +29,7 @@ namespace LibraryManagement.Models
             this.fine = fine;
         }
 
-        public DetailReturnCard(int stt, string id, string bookId, string bookName, string returnCardId, string borrowCardId, int borrowDays, int lateDays, long fine)
+        public DetailReturnCard(int stt, string id, string bookId, string bookName, string returnCardId, string borrowCardId, int borrowDays, long fine)
         {
             this.stt = stt;
             this.id = id;

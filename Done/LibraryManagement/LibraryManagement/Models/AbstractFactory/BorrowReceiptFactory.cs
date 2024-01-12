@@ -6,66 +6,61 @@ using System.Threading.Tasks;
 
 namespace LibraryManagement.Models.AbstractFactory
 {
-    public class BorrowReceiptFactory : AbstractSlipFactory
+    public class BorrowReceiptFactory : SlipFactory
     {
         private Receipt receipt = new Receipt();
 
-        public override Receipt CreateReceipt(int stt, string id, string readerId, string readerName, string borrowDate, string returnDate)
+        public Receipt CreateReceipt(int stt, string id, string readerId, string readerName, string borrowDate, string returnDate)
         {
             return new BorrowCard(stt, id, readerId, readerName, borrowDate, returnDate);
         }
 
-        public override void SetDetails(string details)
+        public void SetDetails(string details)
         {
             receipt.Details = $"Borrow Receipt - {details}";
         }
 
-        public override void SetAmount(double amount)
+        public void SetAmount(double amount)
         {
             receipt.Amount = amount;
         }
     }
 
-    public class ReturnReceiptFactory : AbstractSlipFactory
+    public class ReturnReceiptFactory : SlipFactory
     {
         private Receipt receipt = new Receipt();
 
-        public override Receipt CreateReceipt(int stt, string id, string readerId, string readerName, string borrowDate, string returnDate)
-        {
-            return null;
-        }
-
-        public Receipt CreateReceipt1(int stt, string id, string readerId, string readerName, string returnDate, long fineThisPeriod)
+        public Receipt CreateReceipt(int stt, string id, string readerId, string readerName, string returnDate, long fineThisPeriod)
         {
             return new ReturnCard(stt, id, readerId, readerName, returnDate, fineThisPeriod);
         }
 
-        public override void SetDetails(string details)
+        public void SetDetails(string details)
         {
             receipt.Details = $"Return Receipt - {details}";
         }
 
-        public override void SetAmount(double amount)
+        public void SetAmount(double amount)
         {
             receipt.Amount = amount;
         }
     }
 
-    public class FineReceiptFactory : AbstractSlipFactory
+    public class FineReceiptFactory : SlipFactory
     {
         private Receipt receipt = new Receipt();
 
-        public override Receipt CreateReceipt(int stt, string id, string readerId, string readerName, string borrowDate, string returnDate)
+        public Receipt CreateReceipt(int stt, string id, string readerId, string readerName, string borrowDate, string returnDate)
         {
             return receipt;
         }
 
-        public override void SetDetails(string details)
+        public void SetDetails(string details)
         {
             receipt.Details = $"Fine Receipt - {details}";
         }
 
-        public override void SetAmount(double amount)
+        public void SetAmount(double amount)
         {
             receipt.Amount = amount;
         }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using LibraryManagement.Models;
+using LibraryManagement.Models.Builder;
 
 namespace DemoDesign
 {
@@ -294,8 +295,11 @@ namespace DemoDesign
                 DialogResult dgResult = saveFile.ShowDialog();
                 if (dgResult == DialogResult.OK)
                 {
-                    //gọi hàm ToExcel() với tham số là dtgDSHS và filename từ SaveFileDialog
-                    ToExcel(dtgv, saveFile.FileName);
+                    LibraryReportBuilder reportBuilder = new LibraryReportBuilder();
+                    LibraryReportDirector reportDirector = new LibraryReportDirector(reportBuilder);
+
+                    reportDirector.BuildReport(lbTitleName.Text, saveFile.FileName, $"BaoCaoThang{dtp.Value.Month}");
+                    reportBuilder.CreateReport(dtgv);
                 }
             }
         }
@@ -506,7 +510,7 @@ namespace DemoDesign
                 WHERE CTPHIEUMUON.MaCuonSach = CUONSACH.MaCuonSach AND CUONSACH.MaSach = SACH.MaSach
 		                AND SACH.MaDauSach = DAUSACH.MaDauSach AND DAUSACH.MaTheLoai = THELOAI.MaTheLoai
 			                AND CTPHIEUMUON.MaPhieuMuonSach = PHIEUMUON.MaPhieuMuonSach AND PHIEUMUON.MaDocGia = DOCGIA.MaDocGia
-				                AND MONTH(NgMuon) = 11
+				                AND MONTH(NgMuon) = {dtp.Value.Month.ToString()}
                 GROUP BY DOCGIA.MaDocGia, HoTen
                 ORDER BY [So Luot Muon] DESC";
             SqlConnection conn = new SqlConnection(DatabaseInfo.connectionString);

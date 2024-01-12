@@ -6,10 +6,23 @@ using System.Threading.Tasks;
 
 namespace LibraryManagement.Models.AbstractFactory
 {
-    public abstract class AbstractSlipFactory
+    public class SlipFactory
     {
-        public abstract Receipt CreateReceipt(int stt, string id, string readerId, string readerName, string borrowDate, string returnDate);
-        public abstract void SetDetails(string details);
-        public abstract void SetAmount(double amount);
+        public static SlipFactory CreateFactory(string type)
+        {
+            if(type == "borrow")
+            {
+                return new BorrowReceiptFactory();
+            }
+            return new ReturnReceiptFactory();
+        }
+        public Receipt CreateReceipt(int stt, string id, string readerId, string readerName, string borrowDate, string returnDate)
+        {
+            return new BorrowCard(stt, id, readerId, readerName, borrowDate, returnDate);
+        }
+        public Receipt CreateReceipt(int stt, string id, string readerId, string readerName, string returnDate, long fineThisPeriod)
+        {
+            return new ReturnCard(stt, id, readerId, readerName, returnDate, fineThisPeriod);
+        }
     }
 }

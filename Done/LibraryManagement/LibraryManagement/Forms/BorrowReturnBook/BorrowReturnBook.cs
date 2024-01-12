@@ -119,7 +119,7 @@ namespace DemoDesign
 
         private void LoadBorrowCardList()
         {
-            AbstractSlipFactory borrowReceiptFactory = new BorrowReceiptFactory();
+            SlipFactory borrowReceiptFactory = SlipFactory.CreateFactory("return");
 
             SqlConnection conn = new SqlConnection(DatabaseInfo.connectionString);
             conn.Open();
@@ -158,7 +158,7 @@ namespace DemoDesign
 
         private void LoadReturnCardList()
         {
-            ReturnReceiptFactory returnReceiptFactory = new ReturnReceiptFactory();
+            SlipFactory returnReceiptFactory = SlipFactory.CreateFactory("return");
 
             SqlConnection conn = new SqlConnection(DatabaseInfo.connectionString);
             conn.Open();
@@ -170,7 +170,7 @@ namespace DemoDesign
                 returnCardList.Clear();
                 while (reader.Read())
                 {
-                    Receipt card = returnReceiptFactory.CreateReceipt1(stt, reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3).ToString("dd/MM/yyyy"), (long)reader.GetDecimal(4));
+                    Receipt card = returnReceiptFactory.CreateReceipt(stt, reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3).ToString("dd/MM/yyyy"), (long)reader.GetDecimal(4));
                     returnCardList.Add(card);
                     stt++;
                 }

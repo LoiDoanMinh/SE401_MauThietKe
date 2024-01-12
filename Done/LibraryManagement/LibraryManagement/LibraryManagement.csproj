@@ -218,6 +218,8 @@
     <Compile Include="Models\AbstractFactory\AbstractSlipFactory.cs" />
     <Compile Include="Models\AbstractFactory\BorrowReceiptFactory.cs" />
     <Compile Include="Models\AbstractFactory\Receipt.cs" />
+    <Compile Include="Models\Builder\LibraryReportBuilder.cs" />
+    <Compile Include="Models\Builder\LibraryReportDirector.cs" />
     <Compile Include="Models\Command\AddReaderCmd.cs" />
     <Compile Include="Models\Command\Command.cs" />
     <Compile Include="Models\Command\RemoveReaderCmd.cs" />

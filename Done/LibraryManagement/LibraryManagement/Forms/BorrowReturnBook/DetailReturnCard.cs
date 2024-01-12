@@ -102,7 +102,7 @@ namespace LibraryManagement.Forms
                 detailList.Clear();
                 while (reader.Read())
                 {
-                    Models.DetailReturnCard detail = new Models.DetailReturnCard(stt, reader.GetString(0), reader.GetString(1), reader.GetString(2), returnCard.id, reader.GetString(3), reader.GetInt32(4), reader.GetInt32(5), (long)reader.GetDecimal(6));
+                    Models.DetailReturnCard detail = new Models.DetailReturnCard(stt, reader.GetString(0), reader.GetString(1), reader.GetString(2), returnCard.id, reader.GetString(3), reader.GetInt32(4), (long)reader.GetDecimal(5));
                     detailList.Add(detail);
                     stt++;
                     lateDays += detail.lateDays;
