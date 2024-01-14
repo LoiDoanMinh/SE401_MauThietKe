@@ -224,6 +224,15 @@
     <Compile Include="Models\Command\Command.cs" />
     <Compile Include="Models\Command\RemoveReaderCmd.cs" />
     <Compile Include="Models\Command\UpdateReaderCmd.cs" />
+    <Compile Include="Models\Prototype_Decorator\Book.cs" />
+    <Compile Include="Models\Prototype_Decorator\ConcreteBookVolume.cs" />
+    <Compile Include="Models\Prototype_Decorator\DetailImportSlip.cs" />
+    <Compile Include="Models\Prototype_Decorator\DetailImportSlipDecorator.cs" />
+    <Compile Include="Models\Prototype_Decorator\ExcelImportDecorator.cs" />
+    <Compile Include="Models\Prototype_Decorator\IBookVolumePrototype.cs" />
+    <Compile Include="Models\Prototype_Decorator\IDetailImportSlip.cs" />
+    <Compile Include="Models\Prototype_Decorator\ImportSlip.cs" />
+    <Compile Include="Models\Prototype_Decorator\PrintImportDecorator.cs" />
     <Compile Include="Models\State\AvailableState.cs" />
     <Compile Include="Models\State\BookState.cs" />
     <Compile Include="Models\BorrowCard.cs" />

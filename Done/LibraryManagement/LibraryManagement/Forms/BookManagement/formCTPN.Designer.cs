@@ -169,7 +169,6 @@ namespace FormNhapSach
             this.cbMaSach.Name = "cbMaSach";
             this.cbMaSach.Size = new System.Drawing.Size(229, 40);
             this.cbMaSach.TabIndex = 37;
-            this.cbMaSach.SelectedValueChanged += new System.EventHandler(this.cbMaSach_SelectedValueChanged);
             this.cbMaSach.TextChanged += new System.EventHandler(this.cbMaSach_TextChanged);
             // 
             // label3
@@ -192,7 +191,6 @@ namespace FormNhapSach
             this.txbThanhTien.Name = "txbThanhTien";
             this.txbThanhTien.Size = new System.Drawing.Size(229, 39);
             this.txbThanhTien.TabIndex = 35;
-            this.txbThanhTien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbThanhTien_KeyPress);
             // 
             // label1
             // 
@@ -216,7 +214,6 @@ namespace FormNhapSach
             this.txbTenTG.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txbTenTG.Size = new System.Drawing.Size(229, 47);
             this.txbTenTG.TabIndex = 33;
-            this.txbTenTG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTenTG_KeyPress);
             // 
             // txbNamXB
             // 
@@ -227,7 +224,6 @@ namespace FormNhapSach
             this.txbNamXB.Name = "txbNamXB";
             this.txbNamXB.Size = new System.Drawing.Size(229, 39);
             this.txbNamXB.TabIndex = 32;
-            this.txbNamXB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNamXB_KeyPress);
             // 
             // txbNhaXB
             // 
@@ -238,7 +234,6 @@ namespace FormNhapSach
             this.txbNhaXB.Name = "txbNhaXB";
             this.txbNhaXB.Size = new System.Drawing.Size(229, 39);
             this.txbNhaXB.TabIndex = 31;
-            this.txbNhaXB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNhaXB_KeyPress);
             // 
             // cbTenSach
             // 
@@ -356,7 +351,6 @@ namespace FormNhapSach
             this.txbMaCTPN.Name = "txbMaCTPN";
             this.txbMaCTPN.Size = new System.Drawing.Size(229, 39);
             this.txbMaCTPN.TabIndex = 23;
-            this.txbMaCTPN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbMaCTPN_KeyPress);
             // 
             // txbSoLuong
             // 
@@ -579,7 +573,6 @@ namespace FormNhapSach
             this.Name = "formCTPN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formCTPN_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gb_CTpNhap.ResumeLayout(false);
             this.gb_CTpNhap.PerformLayout();

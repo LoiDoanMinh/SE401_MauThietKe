@@ -498,3 +498,34 @@ C:\Users\trung\OneDrive\Máy tính\MTK\SE401_MauThietKe\Done\LibraryManagement\L
 C:\Users\trung\OneDrive\Máy tính\MTK\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
 C:\Users\trung\OneDrive\Máy tính\MTK\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.exe
 C:\Users\trung\OneDrive\Máy tính\MTK\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe.config
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.pdb
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.AssemblyReference.cache
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.ResolveComReference.cache
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.fHome.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\formdausach.Form1.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\FormLoaiSach.Form1.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\FormNhapSach.Form1.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\FormNhapSach.formCTPN.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\FormSach.Form1.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\FormTacGia.Form1.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\DemoDesign.BorrowReturnBook.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Forms.CreateBorrowCard.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Forms.CreateReturnCard.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Forms.DetailBorrowCard.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Forms.DetailReturnCard.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\ThayDoiQuyDinh.FormThayDoiQuyDinh.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\TraCuuSach.FormTraCuu.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\FormLoaiDocGia.FormLoaiDocGia.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\PhieuThuTien.FormThuTien.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManage.Form1.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\DemoDesign.Report.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Properties.Icons.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Properties.Resources.resources
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.GenerateResource.cache
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CoreCompileInputs.cache
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.exe
+C:\Users\ACER\OneDrive - gm.uit.edu.vn\Máy tính\SE401_MauThietKe\Done\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
